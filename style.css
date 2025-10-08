@@ -1,0 +1,544 @@
+/* Patterson Global - Blueprint Style CSS */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #003c80;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Blueprint Grid Background */
+.blueprint-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+    background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Main Container */
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Top Navigation */
+.top-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 40px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #66b3ff;
+}
+
+.nav-item i {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.contact-btn {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: rgba(102, 179, 255, 0.2);
+    border-color: #66b3ff;
+    color: #66b3ff;
+}
+
+/* Layout Container */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    width: 200px;
+    background: rgba(0, 30, 60, 0.9);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px 0;
+    position: fixed;
+    height: 100vh;
+    z-index: 999;
+}
+
+/* Patterson Global Logo in Sidebar */
+.logo-container {
+    padding: 0 30px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.pg-logo {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    transition: all 0.3s ease;
+    filter: brightness(1.1);
+}
+
+.pg-logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.3);
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+    padding: 0 30px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    border-left: 3px solid transparent;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #66b3ff;
+    border-left-color: #66b3ff;
+}
+
+.nav-link i {
+    width: 20px;
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+.nav-section {
+    margin: 25px 0 15px;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #99ccff;
+    text-transform: uppercase;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 200px;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    position: relative;
+    background: radial-gradient(ellipse at center, rgba(102, 179, 255, 0.05) 0%, transparent 70%);
+}
+
+.hero-logo {
+    text-align: center;
+}
+
+.pg-hero-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+}
+
+.pg-hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.6s ease;
+}
+
+.pg-hero-image:hover {
+    transform: scale(1.02);
+    filter: brightness(1.2) contrast(1.2);
+}
+
+.company-title {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 0.9;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 500px;
+    padding: 80px 40px 40px;
+    background: rgba(0, 20, 40, 0.7);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Services Section */
+.services-section {
+    margin-bottom: 60px;
+}
+
+.services-section .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.service-card:nth-child(3) {
+    grid-column: span 2;
+}
+
+.service-icon {
+    font-size: 24px;
+    color: #66b3ff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.service-card p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+/* Global Reach Section */
+.global-reach-section .section-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.world-map-container {
+    position: relative;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.world-map {
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450"><g stroke="white" stroke-width="1" fill="none" opacity="0.3"><path d="M70,100 C120,80 180,90 230,100 C280,110 330,105 380,100 M400,120 C450,110 500,115 550,120 C600,125 650,120 700,120 M100,180 C150,170 200,175 250,180 C300,185 350,180 400,180 M480,210 C530,200 580,205 630,210 C680,215 730,210 780,210 M170,140 C220,130 270,135 320,140 M520,160 C570,150 620,155 670,160 M60,260 C110,250 160,255 210,260 M350,290 C400,280 450,285 500,290"/><path d="M150,80 L150,320 M300,70 L300,330 M450,75 L450,325 M600,70 L600,330 M750,80 L750,320" stroke="white" stroke-width="0.5" opacity="0.1"/><path d="M50,120 L850,120 M50,180 L850,180 M50,240 L850,240 M50,300 L850,300" stroke="white" stroke-width="0.5" opacity="0.1"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+}
+
+.connection-points {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #66b3ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(102, 179, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.point-1 { top: 30%; left: 20%; }
+.point-2 { top: 40%; left: 45%; }
+.point-3 { top: 50%; left: 70%; }
+.point-4 { top: 60%; left: 25%; }
+.point-5 { top: 70%; left: 60%; }
+.point-6 { top: 35%; left: 80%; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.reach-description {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #99ccff;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .right-panel {
+        width: 400px;
+    }
+    
+    .pg-letters {
+        font-size: 150px;
+    }
+    
+    .company-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-sidebar {
+        width: 160px;
+    }
+    
+    .main-content {
+        margin-left: 160px;
+        flex-direction: column;
+    }
+    
+    .right-panel {
+        width: 100%;
+        padding: 40px 20px;
+    }
+    
+    .top-nav {
+        padding: 15px 20px;
+    }
+    
+    .nav-items {
+        gap: 15px;
+    }
+    
+    .nav-item {
+        font-size: 12px;
+    }
+    
+    .pg-letters {
+        font-size: 120px;
+    }
+    
+    .company-title {
+        font-size: 28px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .layout-container {
+        flex-direction: column;
+    }
+    
+    .hero-section {
+        padding: 40px 20px;
+    }
+    
+    .pg-letters {
+        font-size: 80px;
+    }
+    
+    .company-title {
+        font-size: 24px;
+    }
+}
+
+/* Blueprint Corner Markers */
+.main-container::before,
+.main-container::after {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+.main-container::before {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.main-container::after {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Additional Blueprint Elements */
+.hero-section::before {
+    content: 'PG-001';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.services-section::before {
+    content: 'SEC-01';
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.global-reach-section::before {
+    content: 'SEC-02';
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+/* Blueprint measurement lines */
+.right-panel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 100%;
+    width: 1px;
+    background: linear-gradient(to bottom, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.1) 10%, 
+        rgba(255, 255, 255, 0.1) 90%, 
+        transparent 100%);
+}
+
+/* Blueprint corner details */
+.main-container::before {
+    content: '⌜';
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.main-container::after {
+    content: '⌟';
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+    border: none;
+    width: auto;
+    height: auto;
+}

@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/22757540/README.md)
 # Patterson Global - Global Manufacturing Solutions
 
 A pixel-perfect recreation of a sophisticated corporate website featuring a blueprint-inspired design theme for a global manufacturing company.
