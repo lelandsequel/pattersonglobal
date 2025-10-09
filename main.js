@@ -24,36 +24,90 @@ function initializeApp() {
 }
 
 function setupNavigation() {
-    // Sidebar navigation
-    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-    
+    // Set active navigation based on current page
+    setActiveNavigation();
+
+    // Handle contact form submission if on contact page
+    setupContactForm();
+
+    // Add smooth hover effects for navigation
+    const navLinks = document.querySelectorAll('.nav-link, .nav-item');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            // Smooth scroll to section if exists
-            const sectionName = this.textContent.trim().toLowerCase();
-            scrollToSection(sectionName);
+        link.addEventListener('mouseenter', function() {
+            if (!this.classList.contains('active')) {
+                this.style.transform = 'translateX(5px)';
+            }
+        });
+
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateX(0)';
         });
     });
-    
-    // Top navigation dropdowns
-    const topNavItems = document.querySelectorAll('.nav-item');
-    topNavItems.forEach(item => {
-        if (item.querySelector('i')) {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Add dropdown functionality here if needed
-                console.log('Dropdown clicked:', this.textContent);
+}
+
+function setActiveNavigation() {
+    // Get current page from URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+    // Remove active class from all navigation links
+    const allNavLinks = document.querySelectorAll('.nav-link, .nav-item');
+    allNavLinks.forEach(link => link.classList.remove('active'));
+
+    // Add active class to current page links
+    const currentPageLinks = document.querySelectorAll(`[href="${currentPage}"]`);
+    currentPageLinks.forEach(link => link.classList.add('active'));
+}
+
+function setupContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => {
+                formObject[key] = value;
             });
-        }
-    });
+
+            // Simulate form submission
+            console.log('Form submitted:', formObject);
+
+            // Show success message
+            showFormSuccessMessage();
+
+            // Reset form
+            this.reset();
+        });
+    }
+}
+
+function showFormSuccessMessage() {
+    // Create success message
+    const successMessage = document.createElement('div');
+    successMessage.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(102, 179, 255, 0.95);
+        color: #003c80;
+        padding: 20px 30px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        z-index: 10000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    `;
+    successMessage.textContent = 'Thank you! Your message has been sent successfully.';
+
+    document.body.appendChild(successMessage);
+
+    // Remove message after 3 seconds
+    setTimeout(() => {
+        document.body.removeChild(successMessage);
+    }, 3000);
 }
 
 function setupInteractiveElements() {

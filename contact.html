@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Patterson Global</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Blueprint Grid Background -->
+    <div class="blueprint-grid"></div>
+    
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="nav-items">
+                <a href="index.html" class="nav-item">HOME</a>
+                <a href="services.html" class="nav-item">SERVICES</a>
+                <a href="solutions.html" class="nav-item">SOLUTIONS</a>
+                <a href="industries.html" class="nav-item">INDUSTRIES</a>
+                <a href="about.html" class="nav-item">ABOUT</a>
+                <a href="contact.html" class="nav-item contact-btn">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Layout Container -->
+        <div class="layout-container">
+            <!-- Left Sidebar -->
+            <aside class="left-sidebar">
+                <!-- Patterson Global Logo -->
+                <div class="logo-container">
+                    <img src="patterson-global-logo.png" alt="Patterson Global Logo" class="pg-logo">
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="sidebar-nav">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        HOME
+                    </a>
+                    <a href="services.html" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        SERVICES
+                    </a>
+                    <a href="solutions.html" class="nav-link">
+                        <i class="fas fa-lightbulb"></i>
+                        SOLUTIONS
+                    </a>
+                    <a href="industries.html" class="nav-link">
+                        <i class="fas fa-industry"></i>
+                        INDUSTRIES
+                    </a>
+                    <div class="nav-section">
+                        <span class="section-title">COMPANY</span>
+                    </div>
+                    <a href="about.html" class="nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        ABOUT
+                    </a>
+                    <a href="contact.html" class="nav-link active">
+                        <i class="fas fa-envelope"></i>
+                        CONTACT
+                    </a>
+                </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Page Header -->
+                <section class="page-header">
+                    <div class="header-content">
+                        <h1 class="page-title">CONTACT US</h1>
+                        <p class="page-subtitle">Ready to transform your manufacturing operations? Let's start the conversation.</p>
+                    </div>
+                </section>
+
+                <!-- Contact Content -->
+                <div class="page-content">
+                    <!-- Contact Form and Info Grid -->
+                    <div class="contact-grid">
+                        <!-- Contact Form -->
+                        <section class="contact-form-section">
+                            <h2 class="section-title">GET IN TOUCH</h2>
+                            <form class="contact-form" id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" name="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" name="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">Email Address *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company Name *</label>
+                                    <input type="text" id="company" name="company" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="industry">Industry</label>
+                                    <select id="industry" name="industry">
+                                        <option value="">Select Industry</option>
+                                        <option value="automotive">Automotive</option>
+                                        <option value="aerospace">Aerospace</option>
+                                        <option value="electronics">Electronics</option>
+                                        <option value="medical">Medical Devices</option>
+                                        <option value="energy">Energy</option>
+                                        <option value="consumer">Consumer Goods</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject *</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select Subject</option>
+                                        <option value="consultation">Request Consultation</option>
+                                        <option value="services">Services Inquiry</option>
+                                        <option value="solutions">Solutions Information</option>
+                                        <option value="partnership">Partnership Opportunity</option>
+                                        <option value="support">Technical Support</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your manufacturing challenges and how we can help..." required></textarea>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </button>
+                            </form>
+                        </section>
+
+                        <!-- Contact Information -->
+                        <section class="contact-info-section">
+                            <h2 class="section-title">CONTACT INFORMATION</h2>
+                            
+                            <!-- Global Headquarters -->
+                            <div class="office-card">
+                                <div class="office-header">
+                                    <h3>Global Headquarters</h3>
+                                    <span class="office-badge">HQ</span>
+                                </div>
+                                <div class="office-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>8750 Airport Boulevard<br>Humble, TX 77338, USA</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 (281) 555-0100</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>info@pattersonglobal.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Regional Offices -->
+                            <div class="office-card">
+                                <div class="office-header">
+                                    <h3>European Operations</h3>
+                                    <span class="office-badge">EU</span>
+                                </div>
+                                <div class="office-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Industriestraße 45<br>70565 Stuttgart, Germany</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+49 711 555-0200</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>europe@pattersonglobal.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="office-card">
+                                <div class="office-header">
+                                    <h3>Asia Pacific</h3>
+                                    <span class="office-badge">APAC</span>
+                                </div>
+                                <div class="office-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Marina Bay Financial Centre<br>Singapore 018989</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+65 6555-0300</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>apac@pattersonglobal.com</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Hours -->
+                            <div class="business-hours">
+                                <h3>Business Hours</h3>
+                                <div class="hours-list">
+                                    <div class="hours-item">
+                                        <span class="day">Monday - Friday</span>
+                                        <span class="time">8:00 AM - 6:00 PM</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span class="day">Saturday</span>
+                                        <span class="time">9:00 AM - 2:00 PM</span>
+                                    </div>
+                                    <div class="hours-item">
+                                        <span class="day">Sunday</span>
+                                        <span class="time">Closed</span>
+                                    </div>
+                                </div>
+                                <p class="timezone-note">All times shown in local timezone. 24/7 emergency support available.</p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Emergency Contact -->
+                    <section class="emergency-contact">
+                        <div class="emergency-card">
+                            <div class="emergency-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="emergency-content">
+                                <h3>Emergency Support</h3>
+                                <p>For urgent manufacturing issues requiring immediate assistance, contact our 24/7 emergency hotline.</p>
+                                <a href="tel:+1-800-PATTERSON" class="emergency-phone">+1 (800) PATTERSON</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
